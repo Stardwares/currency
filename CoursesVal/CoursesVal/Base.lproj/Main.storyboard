@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Xl-xv-Scl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Конвертор-->
+        <scene sceneID="b8N-Z8-g6U">
+            <objects>
+                <viewController id="FzE-I1-bEl" customClass="ConverterController" customModule="CoursesVal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PhQ-t0-FJK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enx-kJ-5ys">
+                                <rect key="frame" x="260" y="167" width="97" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="RUR"/>
+                                <connections>
+                                    <action selector="pushActionValTwo:" destination="FzE-I1-bEl" eventType="touchUpInside" id="M7x-GG-xgy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-Xj-1CT">
+                                <rect key="frame" x="17" y="214" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textValOneEditingChange:" destination="FzE-I1-bEl" eventType="editingChanged" id="ygB-Y9-gZJ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Shs-P3-REt">
+                                <rect key="frame" x="260" y="214" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textValTwoEditingChange:" destination="FzE-I1-bEl" eventType="editingChanged" id="L8u-zy-Kat"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;------&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glx-cM-SEz">
+                                <rect key="frame" x="142" y="216" width="90" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Курсы за дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPx-Qc-SVn">
+                                <rect key="frame" x="17" y="88" width="340" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-3d-ZxW">
+                                <rect key="frame" x="16" y="165" width="98" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="RUR"/>
+                                <connections>
+                                    <action selector="pushActionValOne:" destination="FzE-I1-bEl" eventType="touchUpInside" id="8Hr-UG-EF2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1sk-qp-q1o"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Конвертор" id="kMs-Y5-MBQ"/>
+                    <connections>
+                        <outlet property="buttonDone" destination="ZfI-Ik-YQa" id="AhI-dp-UKA"/>
+                        <outlet property="buttonValOne" destination="jAj-3d-ZxW" id="YWw-BG-Vep"/>
+                        <outlet property="buttonValTwo" destination="enx-kJ-5ys" id="Poj-Ya-1We"/>
+                        <outlet property="labelCoursesForDate" destination="GPx-Qc-SVn" id="7Lj-OG-PAa"/>
+                        <outlet property="textValueValOne" destination="9nc-Xj-1CT" id="Jab-eB-Mug"/>
+                        <outlet property="textValueValTwo" destination="Shs-P3-REt" id="V4w-JG-ReG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnV-eD-gSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem style="done" systemItem="done" id="ZfI-Ik-YQa">
+                    <connections>
+                        <action selector="pushButtonAction:" destination="FzE-I1-bEl" id="cAk-eL-JU9"/>
+                    </connections>
+                </barButtonItem>
+            </objects>
+            <point key="canvasLocation" x="1287.2" y="563.56821589205401"/>
+        </scene>
+        <!--Выберите валюту-->
+        <scene sceneID="Oez-Da-wfG">
+            <objects>
+                <tableViewController id="Lka-nt-b7x" customClass="SelectCurrencyController" customModule="CoursesVal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kwJ-hb-AXX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="20" reuseIdentifier="CellCurrency" rowHeight="96" id="IQo-Lu-ISa" customClass="CoursesCell" customModule="CoursesVal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IQo-Lu-ISa" id="5rW-Gc-GJc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYF-yH-wgF">
+                                            <rect key="frame" x="16" y="14" width="217" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="gl3-ny-uxi"/>
+                                                <constraint firstAttribute="width" constant="217" id="z3D-9l-J4C"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-HT-lgy">
+                                            <rect key="frame" x="246" y="14" width="113" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="113" id="B1n-iX-gJi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUa-J7-pYd">
+                                            <rect key="frame" x="16" y="43" width="343" height="31"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="343" id="31F-6i-Ah1"/>
+                                                <constraint firstAttribute="height" constant="31" id="wLI-wr-Diw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HZR-HT-lgy" firstAttribute="leading" secondItem="gYF-yH-wgF" secondAttribute="trailing" constant="13" id="3Q1-g2-ZNu"/>
+                                        <constraint firstItem="nUa-J7-pYd" firstAttribute="trailing" secondItem="5rW-Gc-GJc" secondAttribute="trailingMargin" id="4c1-CI-4MS"/>
+                                        <constraint firstItem="HZR-HT-lgy" firstAttribute="top" secondItem="5rW-Gc-GJc" secondAttribute="top" constant="14" id="Ar6-j9-QJO"/>
+                                        <constraint firstItem="gYF-yH-wgF" firstAttribute="leading" secondItem="5rW-Gc-GJc" secondAttribute="leading" constant="16" id="TYd-cL-26A"/>
+                                        <constraint firstAttribute="bottom" secondItem="gYF-yH-wgF" secondAttribute="bottom" constant="14.5" id="VD1-H6-tS3"/>
+                                        <constraint firstItem="gYF-yH-wgF" firstAttribute="top" secondItem="5rW-Gc-GJc" secondAttribute="top" constant="14" id="WoX-6Q-UsO"/>
+                                        <constraint firstAttribute="bottom" secondItem="HZR-HT-lgy" secondAttribute="bottom" constant="14.5" id="Yts-ez-lly"/>
+                                        <constraint firstItem="nUa-J7-pYd" firstAttribute="top" secondItem="gYF-yH-wgF" secondAttribute="bottom" constant="8" id="dns-fZ-S6a"/>
+                                        <constraint firstAttribute="trailing" secondItem="HZR-HT-lgy" secondAttribute="trailing" constant="16" id="fyu-PU-2Rz"/>
+                                        <constraint firstItem="nUa-J7-pYd" firstAttribute="leading" secondItem="5rW-Gc-GJc" secondAttribute="leadingMargin" id="zIN-jv-jEj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelCurrencyCourse" destination="HZR-HT-lgy" id="rix-HY-1Ri"/>
+                                    <outlet property="labelCurrencyFullName" destination="nUa-J7-pYd" id="zbi-8h-0T5"/>
+                                    <outlet property="labelCurrencyName" destination="gYF-yH-wgF" id="Pzj-7W-9ih"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Lka-nt-b7x" id="NiX-lm-X7L"/>
+                            <outlet property="delegate" destination="Lka-nt-b7x" id="hOt-y5-pSO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Выберите валюту" id="bij-Ac-CFG">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="fx3-Pu-eXL">
+                            <connections>
+                                <action selector="pushCancelAction:" destination="Lka-nt-b7x" id="1N8-UJ-pkf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ns-yX-IDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3079.1999999999998" y="565.36731634182911"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vNi-Mw-AyI">
+            <objects>
+                <navigationController storyboardIdentifier="selectedCurrencyNSID" id="X59-uD-HXJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Afx-Q7-Nhp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lka-nt-b7x" kind="relationship" relationship="rootViewController" id="iEh-xW-Y8T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHq-Hb-3em" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127" y="566"/>
+        </scene>
+        <!--Конвертор-->
+        <scene sceneID="c9o-MN-Oia">
+            <objects>
+                <navigationController title="Конвертор" automaticallyAdjustsScrollViewInsets="NO" id="1Xl-xv-Scl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Конвертор" id="Z0w-q1-HMK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ty4-Sg-d7u">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FzE-I1-bEl" kind="relationship" relationship="rootViewController" id="o6g-cO-szO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ys3-Fi-LsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="563.56821589205401"/>
+        </scene>
+    </scenes>
+</document>
