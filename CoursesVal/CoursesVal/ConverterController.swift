@@ -9,14 +9,30 @@
 import UIKit
 
 class ConverterController: UIViewController {
-
+    
+    
+    @IBOutlet weak var buttonInsert: UIButton!
     @IBOutlet weak var labelCoursesForDate: UILabel!
     
+    @IBOutlet weak var updateCurrencyLast: UITextView!
     @IBOutlet weak var buttonValOne: UIButton!
     @IBOutlet weak var buttonValTwo: UIButton!
     
     @IBOutlet weak var textValueValOne: UITextField!
     @IBOutlet weak var textValueValTwo: UITextField!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    @IBAction func clearButton(_ sender: Any) {
+        textValueValOne.text = nil
+        textValueValTwo.text = nil
+    }
+    @IBAction func buttonActionInsert(_ sender: UIButton) {
+        textValueValOne.text = textValueValOne.text! + sender.title(for: UIControlState.normal)!
+    }
+    
     
     @IBAction func pushActionValOne(_ sender: Any) {
         let nc = storyboard?.instantiateViewController(withIdentifier: "selectedCurrencyNSID") as! UINavigationController
@@ -49,6 +65,16 @@ class ConverterController: UIViewController {
         
     }
     
+    @IBAction func buttonUpdateCurrency(_ sender: Any) {
+        Model.shared.loadXMLFile()
+        
+        let df = DateFormatter()
+        df.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        
+        updateCurrencyLast.text = "Последнее обновление курсов:" + "\n" + df.string(from: NSDate() as Date)
+    }
+    
+    
     
     
     override func viewDidLoad() {
@@ -72,7 +98,6 @@ class ConverterController: UIViewController {
         navigationItem.title = Model.shared.currentDate
         
         Model.shared.loadXMLFile()
-
         // Do any additional setup after loading the view.
     }
     

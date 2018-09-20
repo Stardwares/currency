@@ -16,6 +16,7 @@
 		5A1B5D96214A9A1B00791C3F /* ConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B5D95214A9A1B00791C3F /* ConverterController.swift */; };
 		5A1B5D98214AAEAF00791C3F /* SelectCurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B5D97214AAEAF00791C3F /* SelectCurrencyController.swift */; };
 		5A1B5D9A214CE69300791C3F /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B5D99214CE69300791C3F /* CoursesCell.swift */; };
+		5A1B5DBB2152277E00791C3F /* CurrencyCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B5DB92152277E00791C3F /* CurrencyCoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5A1B5D95214A9A1B00791C3F /* ConverterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterController.swift; sourceTree = "<group>"; };
 		5A1B5D97214AAEAF00791C3F /* SelectCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyController.swift; sourceTree = "<group>"; };
 		5A1B5D99214CE69300791C3F /* CoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
+		5A1B5DBA2152277E00791C3F /* CurrencyCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CurrencyCoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				5A1B5D99214CE69300791C3F /* CoursesCell.swift */,
 				5A1B5D95214A9A1B00791C3F /* ConverterController.swift */,
 				5A1B5D97214AAEAF00791C3F /* SelectCurrencyController.swift */,
+				5A1B5DB92152277E00791C3F /* CurrencyCoreData.xcdatamodeld */,
 			);
 			path = CoursesVal;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				5A1B5D98214AAEAF00791C3F /* SelectCurrencyController.swift in Sources */,
 				5A1B5D902140B19F00791C3F /* Model.swift in Sources */,
 				5A1B5D9A214CE69300791C3F /* CoursesCell.swift in Sources */,
+				5A1B5DBB2152277E00791C3F /* CurrencyCoreData.xcdatamodeld in Sources */,
 				5A1B5D7C2140B0B500791C3F /* AppDelegate.swift in Sources */,
 				5A1B5D96214A9A1B00791C3F /* ConverterController.swift in Sources */,
 			);
@@ -350,6 +354,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A1B5DB92152277E00791C3F /* CurrencyCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A1B5DBA2152277E00791C3F /* CurrencyCoreData.xcdatamodel */,
+			);
+			currentVersion = 5A1B5DBA2152277E00791C3F /* CurrencyCoreData.xcdatamodel */;
+			path = CurrencyCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A1B5D702140B0B500791C3F /* Project object */;
 }
