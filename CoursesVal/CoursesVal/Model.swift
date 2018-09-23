@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Currency {
     var NumCode: String?
@@ -32,7 +33,7 @@ class Currency {
     }
 }
 
-class Model: NSObject, XMLParserDelegate {
+class Model: NSObject, XMLParserDelegate,UITableViewDelegate {
    static let shared = Model()
     
     var currencies: [Currency] = []
@@ -107,6 +108,7 @@ class Model: NSObject, XMLParserDelegate {
     
     // распарсить XML  и положить его в currencies: [Currencies], отправить уведомление приложению о том что данные обновились
     func parseXML() {
+        
         currencies = [Currency.rouble()]
         let parser = XMLParser(contentsOf: urlForXML!)
         parser?.delegate = self
@@ -174,10 +176,10 @@ class Model: NSObject, XMLParserDelegate {
                 currentCurrency?.valueDouble = Double(currentCharacters.replacingOccurrences(of: ",", with: "."))
             }
             
-            
             if elementName == "Valute" {
                 currencies.append(currentCurrency!)
             }
         }
+    
     
 }

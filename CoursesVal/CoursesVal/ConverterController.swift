@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ConverterController: UIViewController {
+class ConverterController: UIViewController, UIScrollViewDelegate {
     
     
     @IBOutlet weak var buttonInsert: UIButton!
-    @IBOutlet weak var labelCoursesForDate: UILabel!
     
     @IBOutlet weak var updateCurrencyLast: UITextView!
     @IBOutlet weak var buttonValOne: UIButton!
@@ -23,6 +22,10 @@ class ConverterController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var colors: [UIColor] = [UIColor.red, UIColor.yellow, UIColor.green]
+    var newNews: [String] = ["Новость 1","Новость 2","Новость 3"]
+    var frame: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
     
     
     @IBAction func clearButton(_ sender: Any) {
@@ -68,10 +71,7 @@ class ConverterController: UIViewController {
     @IBAction func buttonUpdateCurrency(_ sender: Any) {
         Model.shared.loadXMLFile()
         
-        let df = DateFormatter()
-        df.dateFormat = "dd-MM-yyyy HH:mm:ss"
-        
-        updateCurrencyLast.text = "Последнее обновление курсов:" + "\n" + df.string(from: NSDate() as Date)
+        updateDateCurrency()
     }
     
     
@@ -79,6 +79,30 @@ class ConverterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateDateCurrency()
+        updateCurrencyLast.isEditable = false
+        
+        scrollView.delegate = self
+        scrollView.isPagingEnabled = true
+        
+        self.view.addSubview(scrollView)
+        for index in 0..<colors.count {
+            
+            frame.origin.x = (UIScreen.main.bounds.width - 35) * CGFloat(index)
+            self.scrollView.frame.size.width = (UIScreen.main.bounds.width - 35)
+            frame.size = self.scrollView.frame.size
+            
+            let subView =  UITextView(frame: frame)
+            subView.backgroundColor = colors[index]
+            subView.text = newNews[index]
+            subView.isEditable = false
+            self.scrollView.addSubview(subView)
+        }
+        
+        self.scrollView.contentSize = CGSize(width: (UIScreen.main.bounds.width - 35) * 3, height: self.scrollView.frame.size.height)
+        pageControl.addTarget(self, action: #selector(self.changePage(sender:)), for: UIControlEvents.valueChanged)
+        
+        
         textValueValOne.delegate = self
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "startLoadingXML"), object: nil, queue: nil) { (notification) in
@@ -97,14 +121,35 @@ class ConverterController: UIViewController {
         
         navigationItem.title = Model.shared.currentDate
         
-        Model.shared.loadXMLFile()
+    //    Model.shared.loadXMLFile()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Model.shared.loadXMLFile()
+    }
+    
+    @objc func changePage(sender: AnyObject) -> () {
+        let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
+        scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
+    
+    func updateDateCurrency() {
+        let df = DateFormatter()
+        df.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        
+        updateCurrencyLast.text = "Последнее обновление курсов:" + "\n" + df.string(from: NSDate() as Date)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         refreshButtons()
         textValOneEditingChange(self)
-        labelCoursesForDate.text = "Курсы за дату: \(Model.shared.currentDate)"
         navigationItem.rightBarButtonItem = nil
     }
 
